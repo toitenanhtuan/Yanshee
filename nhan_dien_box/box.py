@@ -26,7 +26,7 @@ def detect_red(frame, focal_length, actual_width):
             center_y = y + h // 2
             frame_center_x, frame_center_y = frame.shape[1] // 2, frame.shape[0] // 2
             offset_x = center_x - frame_center_x
-            offset_y = center_y - frame_center_y
+            offset_y = frame_center_y - center_y
             return frame, distance, offset_x, offset_y, area
     return frame, None, None, None, None
 
@@ -48,7 +48,7 @@ def detect_green(frame, focal_length, actual_width):
             center_y = y + h // 2
             frame_center_x, frame_center_y = frame.shape[1] // 2, frame.shape[0] // 2
             offset_x = center_x - frame_center_x
-            offset_y = center_y - frame_center_y
+            offset_y = frame_center_y - center_y
             return frame, distance, offset_x, offset_y, area
     return frame, None, None, None, None
 
@@ -70,7 +70,7 @@ def detect_blue(frame, focal_length, actual_width):
             center_y = y + h // 2
             frame_center_x, frame_center_y = frame.shape[1] // 2, frame.shape[0] // 2
             offset_x = center_x - frame_center_x
-            offset_y = center_y - frame_center_y
+            offset_y = frame_center_y - center_y
             return frame, distance, offset_x, offset_y, area
     return frame, None, None, None, None
 
